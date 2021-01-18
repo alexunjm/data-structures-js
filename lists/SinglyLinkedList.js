@@ -44,9 +44,7 @@ class SinglyLinkedList {
     return this;
   }
   unshift(value) {
-    const tail = this.head;
-    this.head = new SLLNode(value);
-    this.head.setNext(tail);
+    this.head = new SLLNode(value).setNext(this.head);
     return this;
   }
 }
